@@ -1,0 +1,9 @@
+export const LOWER = "abcdefghijklmnopqrstuvwxyz"
+    , UPPER = LOWER.toUpperCase()
+    , DIGIT = "0123456789"
+    , class2type = {}
+    , hasOwn = class2type.hasOwnProperty
+    , fnToString = hasOwn.toString
+    , ObjectFunctionString = fnToString.call(Object)
+    , getProto = Object.getPrototypeOf
+    , _toString = class2type.toString;

@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+node_modules/
+src/
+webpack.config.js
+yarn.lock
+tsconfig.json
+test.html
+index.ts
+.gitignore
+.npmignore
+package.json
+test.js
+hefang-js.iml
+*.tgz
