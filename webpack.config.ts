@@ -13,7 +13,7 @@ module.exports = {
         globalObject: "typeof self !== 'undefined' ? self : this"
     },
     resolve: {
-        extensions: [".ts"]
+        extensions: [".ts", ".tsx", ".json"]
     },
     module: {
         rules: [

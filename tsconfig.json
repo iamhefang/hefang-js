@@ -8,7 +8,8 @@
       "es6",
       "dom"
     ],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "jsx": "react"
   },
   "exclude": [
     "node_modules",
