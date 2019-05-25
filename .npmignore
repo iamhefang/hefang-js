@@ -15,3 +15,5 @@ hefang-js.iml
 *.tsx
 *.map
 webpack.config.ts
+test.ts
+test.d.ts

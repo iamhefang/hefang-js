@@ -15,7 +15,7 @@ export function randomBytes(length: number) {
  */
 export function randString(length: number, src?: string) {
     src = src || `${LOWER}${UPPER}${DIGIT}\`~!@#$%^&*()-=_+[]\\{}|;':",./<>?`;
-    let i = 0, len = src.length, buffer = '';
+    let i = 0, len = src.length - 1, buffer = '';
     for (; i < length; i++) {
         buffer += src.charAt(randNumber(0, len));
     }

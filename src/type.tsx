@@ -16,6 +16,14 @@ for (const type in Types) {
     class2type["[object " + type + "]"] = Types[type];
 }
 
+/**
+ * 判断一个对象是否为基础类型
+ * @param obj
+ */
+export function isBasicType(obj: any): boolean {
+    return [Types.Number, Types.String].indexOf(type(obj)) !== -1
+}
+
 export function type(obj: any): Types {
     return class2type[_toString.call(obj)];
 }

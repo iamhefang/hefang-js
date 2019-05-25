@@ -116,3 +116,5 @@ typings/
 *.js
 *.map
 hefang-js.iml
+test.js
+test.ts
