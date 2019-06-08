@@ -118,3 +118,5 @@ typings/
 hefang-js.iml
 test.js
 test.ts
+/.idea
+/.vscode
