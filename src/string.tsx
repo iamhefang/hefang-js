@@ -52,6 +52,7 @@ export function padEnd(str: string | number, targetLength: number, padChar: stri
 export function trimLeft(str: string) {
     if (!str) return str;
     if ('trimLeft' in String.prototype) {
+        // @ts-ignore
         return String.prototype.trimLeft.call(str)
     }
     return str.replace(/^\s+/, '')
@@ -60,6 +61,7 @@ export function trimLeft(str: string) {
 export function trimRight(str: string) {
     if (!str) return str;
     if ('trimRight' in String.prototype) {
+        // @ts-ignore
         return String.prototype.trimRight.call(str)
     }
     return str.replace(/\s+$/, '')

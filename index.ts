@@ -11,6 +11,7 @@ export * from "./src/graphics"
 export * from "./src/random"
 export * from "./src/string"
 export * from "./src/type"
+export * from "./src/debounce"
 
 
 export * from "./src/hash/base64"
