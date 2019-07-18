@@ -13,7 +13,7 @@ export function randomBytes(length: number) {
  * @param src
  * @returns {string}
  */
-export function randString(length: number, src?: string) {
+export function randString(length: number, src?: string): string {
     src = src || `${LOWER}${UPPER}${DIGIT}\`~!@#$%^&*()-=_+[]\\{}|;':",./<>?`;
     let i = 0, len = src.length - 1, buffer = '';
     for (; i < length; i++) {
@@ -22,16 +22,16 @@ export function randString(length: number, src?: string) {
     return buffer;
 }
 
-export function randUpper(length: number) {
+export function randUpper(length: number): string {
     return randString(length, UPPER)
 }
 
 
-export function randLower(length: number) {
+export function randLower(length: number): string {
     return randString(length, LOWER)
 }
 
-export function randLetter(length: number, containDigit: boolean = false) {
+export function randLetter(length: number, containDigit: boolean = false): string {
     return randString(length, `${UPPER}${LOWER}${containDigit ? DIGIT : ""}`)
 }
 
@@ -41,6 +41,6 @@ export function randLetter(length: number, containDigit: boolean = false) {
  * @param max
  * @returns {Number}
  */
-function randNumber(min, max) {
+function randNumber(min: number, max: number): number {
     return ~~(Math.random() * (max - min + 1) + min);
 }

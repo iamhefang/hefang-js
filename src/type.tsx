@@ -1,31 +1,41 @@
-import {_toString, class2type, fnToString, getProto, hasOwn, ObjectFunctionString} from "./consts";
+import {_toString, fnToString, getProto, hasOwn, ObjectFunctionString} from "./consts";
 
+/**
+ * @deprecated
+ */
 export enum Types {
     Function = "function",
     String = "string",
+    Boolean = "boolean",
     Number = "number",
     Date = "date",
     RegExp = "regexp",
     Error = "error",
     Symbol = "symbol",
     Object = "object",
-    Array = "array"
+    Array = "array",
+    Map = "map",
+    Set = "set",
+    Null = "null",
+    Undefined = "undefined",
+    NaN = "number"
 }
 
-for (const type in Types) {
-    class2type["[object " + type + "]"] = Types[type];
-}
+// for (const type in Types) {
+//     class2type["[object " + type + "]"] = Types[type];
+// }
 
 /**
  * 判断一个对象是否为基础类型
  * @param obj
  */
 export function isBasicType(obj: any): boolean {
-    return [Types.Number, Types.String].indexOf(type(obj)) !== -1
+    return ["Number", "String"].indexOf(type(obj)) !== -1
 }
 
-export function type(obj: any): Types {
-    return class2type[_toString.call(obj)];
+export function type(obj: any): string {
+    const type = /^\[object (.*?)]$/.exec(_toString.call(obj));
+    return isNaN(obj) ? "NaN" : type[1];
 }
 
 export function isNumberic(obj: any): boolean {
@@ -48,7 +58,7 @@ export function isPlainObject(obj: object) {
     let proto, Ctor;
     // Detect obvious negatives
     // Use toString instead of jQuery.type to catch host objects
-    if (!obj || toString.call(obj) !== "[object Object]") {
+    if (!obj || type(obj) != "Object") {
         return false;
     }
     proto = getProto(obj);
