@@ -17,3 +17,4 @@ hefang-js.iml
 webpack.config.ts
 test.ts
 test.d.ts
+test/

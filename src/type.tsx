@@ -43,7 +43,7 @@ export function isNumberic(obj: any): boolean {
 }
 
 export function isFunction(func: any): boolean {
-    return typeof func === Types.Function;
+    return typeof func === "function";
 }
 
 export function isEmptyObject(obj: object) {
