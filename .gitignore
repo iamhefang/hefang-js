@@ -113,10 +113,12 @@ typings/
 .next
 
 *.d.ts
-*.js
+/src/**/*.js
+/src/*.js
 *.map
-hefang-js.iml
+*.iml
 test.js
 test.ts
 /.idea
 /.vscode
+/index.js

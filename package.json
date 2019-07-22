@@ -1,23 +1,24 @@
 {
   "name": "hefang-js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "dist/index.js",
   "author": "hefang",
   "license": "MIT",
   "scripts": {
-    "test": "ts-jest",
+    "pretest": "tsc",
+    "test": "jest",
     "watch": "webpack -w --mode=development",
     "build": "webpack -p --mode=production && echo export as namespace H; >> index.d.ts",
     "pack": "npm run build && rm *.tgz && npm pack"
   },
   "devDependencies": {
+    "jest": "^24.8.0",
     "@types/jest": "^24.0.15",
     "@types/node": "^11.10.4",
     "@types/webpack": "^4.4.25",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
-    "ts-jest": "^24.0.2",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3333",

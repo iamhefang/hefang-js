@@ -41,6 +41,6 @@ export function randLetter(length: number, containDigit: boolean = false): strin
  * @param max
  * @returns {Number}
  */
-function randNumber(min: number, max: number): number {
+export function randNumber(min: number, max: number): number {
     return ~~(Math.random() * (max - min + 1) + min);
 }
