@@ -34,8 +34,7 @@ export function isBasicType(obj: any): boolean {
 }
 
 export function type(obj: any): string {
-    const type = /^\[object (.*?)]$/.exec(_toString.call(obj));
-    return isNaN(obj) ? "NaN" : type[1];
+    return isNaN(obj) ? "NaN" : /^\[object (.*?)]$/.exec(_toString.call(obj))[1];
 }
 
 export function isNumberic(obj: any): boolean {
