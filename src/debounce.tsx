@@ -1,4 +1,4 @@
-import {execute} from "./core";
+import { execute } from "./core";
 
 export function debounce<T>(func: Function, wait: number = 200): Function {
     let lastCallTimer;

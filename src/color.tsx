@@ -1,4 +1,4 @@
-import {padStart} from "./string";
+import { padStart } from "./string";
 
 export type ColorMap = { [key: string]: string };
 
@@ -276,7 +276,7 @@ export function rgb2hsl(r: number, g: number, b: number): HSLColor {
         }
         h /= 6;
     }
-    return {hue: Math.round(h * 360), saturation: +s.toFixed(2), lightness: +l.toFixed(2)};
+    return { hue: Math.round(h * 360), saturation: +s.toFixed(2), lightness: +l.toFixed(2) };
 }
 
 function hue2rgb(p: number, q: number, t: number) {

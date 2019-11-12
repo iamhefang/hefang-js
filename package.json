@@ -12,15 +12,16 @@
     "pack": "npm run build && rm *.tgz && npm pack"
   },
   "devDependencies": {
-    "jest": "^24.8.0",
     "@types/jest": "^24.0.15",
     "@types/node": "^11.10.4",
     "@types/webpack": "^4.4.25",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
+    "jest": "^24.8.0",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
+    "tslint": "^5.20.1",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"

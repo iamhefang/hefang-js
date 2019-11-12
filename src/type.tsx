@@ -1,4 +1,4 @@
-import {_toString, fnToString, getProto, hasOwn, ObjectFunctionString} from "./consts";
+import { _toString, fnToString, getProto, hasOwn, ObjectFunctionString } from "./consts";
 
 /**
  * @deprecated

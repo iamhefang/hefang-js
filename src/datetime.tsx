@@ -1,4 +1,4 @@
-import {padStart} from "./string";
+import { padStart } from "./string";
 
 const smallMonth = [4, 6, 9, 11];
 

@@ -1,4 +1,4 @@
-import {DIGIT, LOWER, UPPER} from "../consts";
+import { DIGIT, LOWER, UPPER } from "../consts";
 
 const base64map = `${UPPER}${LOWER}${DIGIT}+/`;
 

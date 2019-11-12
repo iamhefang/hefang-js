@@ -1,4 +1,4 @@
-import {DIGIT, LOWER, UPPER} from "./consts";
+import { DIGIT, LOWER, UPPER } from "./consts";
 
 export function randomBytes(length: number) {
     let bytes = [];

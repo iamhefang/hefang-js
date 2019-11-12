@@ -1,5 +1,5 @@
-import {isFunction, isPlainObject} from "./type";
-import {guid} from "./hash/guid";
+import { isFunction, isPlainObject } from "./type";
+import { guid } from "./hash/guid";
 
 declare const global, wx;
 

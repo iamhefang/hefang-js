@@ -1,5 +1,5 @@
-import {bytesToHex, bytesToWords, endian, Md5Sha1Options, wordsToBytes} from "./crypt";
-import {bin, utf8} from "../charenc";
+import { bytesToHex, bytesToWords, endian, Md5Sha1Options, wordsToBytes } from "./crypt";
+import { bin, utf8 } from "../charenc";
 
 declare const Buffer;
 

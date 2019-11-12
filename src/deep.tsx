@@ -1,5 +1,5 @@
-import {extend} from "./core";
-import {isEmptyObject, type} from "./type";
+import { extend } from "./core";
+import { isEmptyObject, type } from "./type";
 
 
 export function deepClone<T>(obj: T): T {
