@@ -19,3 +19,4 @@ test.ts
 test.d.ts
 test/
 jest.*
+package.d.ts
