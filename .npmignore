@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
+.vs/
 node_modules/
 webpack.config.js
 yarn.lock
@@ -20,3 +21,4 @@ test.d.ts
 test/
 jest.*
 package.d.ts
+tslint.json
