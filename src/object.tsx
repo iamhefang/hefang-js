@@ -5,8 +5,8 @@ import { flatArray } from "./array";
  * @param {any} obj
  * @param  {...string} attrs
  */
-export function chainingCheck(obj: object | any, ...attrs: string[]): any {
-    attrs = flatArray(attrs.map(attr => attr.indexOf('.') === -1 ? attr : attr.split('.')), attrs.length);
+export function chainingCheck(obj: object | any, ...attrs: (string | number)[]): any {
+    attrs = flatArray(attrs.map(attr => typeof attr === "string" && attr.indexOf('.') !== -1 ? attr.split('.') : attr), attrs.length);
     let attr;
     for (let idx = 0; idx < attrs.length; idx++) {
         attr = attrs[idx];
