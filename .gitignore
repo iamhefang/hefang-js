@@ -123,3 +123,4 @@ test.ts
 /.vscode
 /index.js
 yarn.lock
+/dist/

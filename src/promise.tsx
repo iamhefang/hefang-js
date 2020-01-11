@@ -19,10 +19,10 @@
  * @returns {Promise<{ [key: string]: T }>}
  */
 export function doPromiseAll(promiseMap: { [key: string]: Promise<any> }): Promise<{ [key: string]: any }> {
-    const names = Object.keys(promiseMap);
-    return Promise.all(Object.values(promiseMap)).then(values => {
-        const resultMap = {};
-        values.forEach((value, index) => resultMap[names[index]] = value);
-        return resultMap;
-    });
+	const names = Object.keys(promiseMap);
+	return Promise.all(Object.values(promiseMap)).then(values => {
+		const resultMap = {};
+		values.forEach((value, index) => resultMap[names[index]] = value);
+		return resultMap;
+	});
 }

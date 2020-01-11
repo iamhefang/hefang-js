@@ -22,3 +22,4 @@ test/
 jest.*
 package.d.ts
 tslint.json
+.editorconfig

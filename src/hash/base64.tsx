@@ -1,7 +1,7 @@
 export function base64encode(str: string): string {
-    return btoa(encodeURIComponent(str));
+	return btoa(encodeURIComponent(str));
 }
 
 export function base64decode(baseString: string): string {
-    return decodeURIComponent(atob(baseString))
+	return decodeURIComponent(atob(baseString))
 }
