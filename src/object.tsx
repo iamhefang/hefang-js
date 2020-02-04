@@ -1,4 +1,5 @@
-import { flatArray } from "./array";
+import {flatArray} from "./array";
+import {type} from "./type";
 
 /**
  * 链式判断
@@ -6,10 +7,12 @@ import { flatArray } from "./array";
  * @param  {...string} attrs
  */
 export function chainingCheck(obj: object | any, ...attrs: (string | number)[]): any | null {
-	attrs = flatArray(attrs.map(attr => typeof attr === "string" && attr.indexOf('.') !== -1 ? attr.split('.') : attr), attrs.length);
+	if (type(obj) !== "Object") return obj;
+	const attrbutes = flatArray(attrs.map(attr => typeof attr === "string" && attr.indexOf('.') !== -1 ? attr.split('.') : attr), attrs.length);
 	let attr;
 	for (let idx = 0; idx < attrs.length; idx++) {
-		attr = attrs[idx];
+		if (type(obj) !== "Object") return null;
+		attr = attrbutes[idx];
 		if (!obj || !(attr in obj)) return null;
 		obj = obj[attr]
 	}

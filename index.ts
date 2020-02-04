@@ -1,9 +1,9 @@
-export { version } from "./package.json"
+export {version} from "./package.json"
 
 export * from "./src/array"
 export * from "./src/charenc"
 export * from "./src/color"
-export { UPPER, LOWER, DIGIT } from "./src/consts"
+export {UPPER, LOWER, DIGIT} from "./src/consts"
 export * from "./src/core"
 export * from "./src/datetime"
 export * from "./src/deep"

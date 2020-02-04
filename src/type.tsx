@@ -1,4 +1,4 @@
-import { _toString, fnToString, getProto, hasOwn, ObjectFunctionString } from "./consts";
+import {_toString, fnToString, getProto, hasOwn, ObjectFunctionString} from "./consts";
 
 /**
  * 判断一个对象是否为基础类型
@@ -10,7 +10,7 @@ export function isBasicType(obj: any): boolean {
 
 export function type(obj: any): string {
 	const type = /^\[object (.*?)]$/.exec(_toString.call(obj))[1];
-	return type === "Number" && isNaN(obj) ? "NaN" : type;
+	return isNaN(obj) ? "NaN" : type;
 }
 
 export function isNumberic(obj: any): boolean {
